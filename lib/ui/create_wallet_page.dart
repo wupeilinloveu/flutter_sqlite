@@ -10,12 +10,12 @@ import 'package:ed25519_hd_key/ed25519_hd_key.dart';
 import "package:hex/hex.dart";
 import 'package:web3dart/web3dart.dart';
 
-class CreateWallet extends StatefulWidget {
+class CreateWalletPage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => new CreateWalletState();
+  State<StatefulWidget> createState() => new CreateWalletPageState();
 }
 
-class CreateWalletState extends State<CreateWallet> {
+class CreateWalletPageState extends State<CreateWalletPage> {
   TextEditingController _name = new TextEditingController();
   TextEditingController _password = new TextEditingController();
   TextEditingController _confirmPassword = new TextEditingController();

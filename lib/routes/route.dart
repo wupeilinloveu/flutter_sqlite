@@ -7,7 +7,7 @@ import 'package:flutter_sqlite/ui/wallet_manger_page.dart';
 
 class Routes{
   static String home="/HomePage";
-  static String createWallet="/CreateWallet";
+  static String createWallet="/CreateWalletPage";
   static String walletManager="/WalletMangerPage";
 
   static void configureRoutes(Router router) {
@@ -31,7 +31,7 @@ var homeRouteHandler = Handler(
 //Create wallet page
 var createWalletRouteHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-      return CreateWallet();
+      return CreateWalletPage();
     });
 
 //wallet manger page
