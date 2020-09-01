@@ -20,18 +20,6 @@ class WalletMangerPageState extends State<WalletMangerPage> {
   SqliteWallet _sqliteWallet = new SqliteWallet();
 
   @override
-  void initState() {
-    super.initState();
-    _getWalletAddressData();
-  }
-
-  @override
-  void didUpdateWidget(WalletMangerPage oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    _getWalletAddressData();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
@@ -54,7 +42,7 @@ class WalletMangerPageState extends State<WalletMangerPage> {
                 new Row(
                   children: <Widget>[
                     new Padding(
-                      padding: const EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 10.0),
+                      padding: const EdgeInsets.fromLTRB(20.0, 10.0, 0.0, 10.0),
                       child: new Text(Strings.walletAddress,
                           style: new TextStyle(fontSize: 16)),
                     )
@@ -106,15 +94,15 @@ class WalletMangerPageState extends State<WalletMangerPage> {
                   ],
                 )),
           ),
+          _buildRemoveButton(context)
         ],
       ),
-      bottomNavigationBar: _buildSignOutButton(context),
     );
   }
 
-  Widget _buildSignOutButton(BuildContext context) {
+  Widget _buildRemoveButton(BuildContext context) {
     return new Container(
-      margin: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 20.0),
+      margin: const EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 20.0),
       height: 47.0,
       child: new RaisedButton(
         child: new Row(
@@ -140,7 +128,4 @@ class WalletMangerPageState extends State<WalletMangerPage> {
     navigateToPage(context, "${Routes.home}");
   }
 
-  Future _getWalletAddressData() async {
-
-  }
 }

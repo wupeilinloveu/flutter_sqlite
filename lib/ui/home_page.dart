@@ -160,7 +160,6 @@ class _HomePageState extends State<HomePage> {
     await _sqliteWallet.close();
     setState(() {
       _walletList = queryWalletAddressList;
-      print("address "+_walletList.toString());
     });
   }
 }
