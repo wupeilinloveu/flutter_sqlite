@@ -10,7 +10,7 @@ class Routes{
   static String createWallet="/CreateWalletPage";
   static String walletManager="/WalletMangerPage";
 
-  static void configureRoutes(Router router) {
+  static void configureRoutes(FluroRouter router) {
     router.define(home, handler: homeRouteHandler);
     router.define(createWallet, handler: createWalletRouteHandler);
     router.define(walletManager, handler: walletManagerRouteHandler);

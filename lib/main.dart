@@ -23,7 +23,7 @@ class MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    final Router router = Router();
+    final FluroRouter router = FluroRouter();
     Routes.configureRoutes(router);
     Application.router = router;
   }
